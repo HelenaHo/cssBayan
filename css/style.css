@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    line-height: 1.5;
+    color: rgb(0, 0, 59);
+    background-color: bisque;
+    min-height: 100%;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* accordeon */
+
+.title {
+    font-size: 42px;
+    width: 50%;
+    margin: 0 auto;
+    
+}
+
+.accordeon {
+    max-width: 50%;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+@media (max-width: 1920px) {
+    .accordeon {
+        font-size: 32px;
+        min-width: 60%;
+    }
+}
+
+@media (max-width: 820px) {
+    .accordeon {
+        font-size: 28px;
+        min-width: 80%;
+    }
+}
+
+@media (max-width: 320px) {
+    .accordeon {
+        font-size: 24px;
+    }
+}
+
+.accordeon-title {
+    display: block;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-top: 1px solid darkblue;
+}
+
+.accordeon-title:hover {
+    color: rgb(116, 116, 160);
+    transition: color 0.2s ease-out;
+}
+
+.accordeon-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+}
+
+.accordeon-input:checked ~ .accordeon-img {
+    display: block;
+}
+
+.accordeon-img {
+    display: none;
+    padding: 10px 15px;     
+}
+
+.accordeon-img_item {
+    display: block;
+    max-width: 65%;
+    margin: 0 auto;
+}
+
+@media (max-width: 820px) {
+    .accordeon-img_item {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 320px) {
+    .accordeon-img_item {
+        max-width: 100%;
+    }
+}
